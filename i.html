@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        header {
+            width: 100%;
+            background-color: rgb(216, 129, 112);
+            text-align: center;
+            font-size: 15px;
+            color: white;
+        }
+
+        table {
+            border-collapse: collapse;
+            text-align: center;
+            width: 60%;
+        }
+
+        .task ul li {
+            font-size: 20px;
+            color: darkmagenta;
+        }
+
+        details {
+            background-color: #eeeeee;
+            padding: 4px;
+            border: 1px solid black;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        summary {
+            color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>CSS Interview Questions</h1>
+    </header>
+    <details>
+        <summary> What is CSS.Why do we use it ?</summary>
+        <p>CSS means (cascading stylesheets) is used to style and layout of the
+            webpages.</p>
+    </details>
+
+    <details>
+        <summary>In how many ways can we create css styling?What are they?</summary>
+        <p>CSS may be added to HTML in 3 different ways.They are:- <br>
+            1)Inline
+            2)Internal
+            3)External
+        </p>
+    </details>
+    <details>
+        <summary> Difference b/w 3 ways of css styling?
+        </summary>
+        <p>
+        <table border="3" cell spacing="0" cell padding="20" width="50%">
+            <thead>
+                <tr>
+
+                    <th>Inline</th>
+                    <th>Internal</th>
+                    <th>External</th>
+                </tr>
+            <tbody style="border: 1px solid black;">
+                <tr>
+
+                    <td style=" border: 1px solid #000;">Inline CSS involves applying styles directly to individual HTML
+                        elements using
+                        the style
+                        attribute. This method allows for specific styling of elements within the HTML
+                        document,
+                        overriding any external or internal styles.</td>
+                    <td style="border: 1px solid black;">Internal or Embedded CSS is defined within the HTML document’s
+                        style
+                        element. It applies styles to specified HTML elements,
+                        The CSS rule set should be within the HTML file in the head section i.e. the CSS
+                        is
+                        embedded
+                        within the style tag inside the head section of the HTML file.</td>
+                    <td>External CSS contains separate CSS files that contain only style properties with
+                        the
+                        help of
+                        tag attributes (For example class, id, heading, … etc). CSS property is written
+                        in a
+                        separate file with a .css extension and should be linked to the HTML document
+                        using a
+                        link
+                        tag. It means that, for each element, style can be set only once and will be
+                        applied
+                        across
+                        web pages.</td>
+                </tr>
+            </tbody>
+            </thead>
+        </table>
+        </p>
+    </details>
+    <details>
+        <summary>What is specificity among the ways of css styling?
+        </summary>
+        <p>Specificity is the algorithm used by browsers to determine the CSS declaration that is the
+            most
+            relevant
+            to an element, which in turn, determines the property value to apply to the element. The
+            specificity
+            algorithm calculates the weight of a CSS selector to determine which rule from competing CSS
+            declarations gets applied to an element.</p>
+    </details>
+
+    <details>
+        <summary>What is the syntax of css?</summary>
+        <p> p{
+            color: red;
+            text-align:center;
+            } <br>
+            p is a selector <br>
+            color is property and red is property value. <br>
+            text-align is property and center is property value.
+        </p>
+    </details>
+
+    <details>
+        <summary>What is a selector?</summary>
+        <p>CSS selectors are used to "find" (or select) the HTML elements you want to style.</p>
+    </details>
+
+    <details>
+        <summary>How many types of selectors?</summary>
+        <p>They are Five categories of Selectors:- <br>
+            1)Simple Selectors <br>
+            2)Combination Selectors <br>
+            3)Psuedo-class selectors <br>
+            4)Psuedo-elements selectors <br>
+            5)attribute selectors</p>
+    </details>
+
+    <details>
+        <summary>What are the general selectors? (id,class,*, (a1,a2),h2)</summary>
+        <p>The general sibling selector selects all elements that are next siblings of a specified
+            element. <br>
+        </p>
+        1) id-name:#div {
+        color:red;
+        }
+        2)classname: .div{
+        font-size :34px;
+        }
+        3)*{
+        margin:0;
+        }
+        4) (a1,a2)-group selector:
+        (p,h1){color:blue;}
+
+        5) h2(elementselector):
+        h2{
+        text-align:center;
+        }
+    </details>
+
+    <details>
+        <summary>What is d/f b/w the pseudo class vs pseudo element?</summary>
+        <p>Pseudo-Classes in CSS selects the element and changes the state of the element based on the
+            user
+            interaction. For Example, Changing the color of the element when the user over it or when
+            the user
+            visits the links. <br>
+            The Pseduo-Elements in CSS is a keyword that is used to style specific part of the
+            element.Pseudo-elements target a specific part of an element’s content or structure.
+            Pseudo-elements
+            are
+            denoted by a double colon (::) before the element they style.</p>
+    </details>
+
+    <details>
+        <summary>what is the rule set in css ? (research-topic)</summary>
+        <p>A CSS rule set contains one or more selectors and one or more declarations.</p>
+    </details>
+
+    <details>
+        <summary>What is box-model?</summary>
+        <p>The CSS box model is essentially a box that wraps around every HTML element.</p>
+    </details>
+
+    <details>
+        <summary>What are the box-modal properties? (explain)</summary>
+        <p>The box model is a container that contains multiple properties including border, margin,
+            padding and
+            the content it self.</p>
+    </details>
+
+    <details>
+        <summary>What is the d/f b/w padding and margin?</summary>
+        <p>Margin:- Margin is the space around an element.it is used to move an element up or down page
+            as well
+            as
+            left or right. <br>
+            Padding:-Padding is the space between the element and the related content inside it.it
+            determines
+            how
+            elements sits with in a container.
+        </p>
+    </details>
+
+    <details>
+        <summary>What is d/f b/w outline and border? (research-topic)</summary>
+        <p>Border is created inside the element whereas the outline is created outside the element</p>
+    </details>
+
+    <details>
+        <summary>types of colors we have in css? (direct clr,rgb,rgba,hexa,,hsl,hsla)
+        </summary>
+        <p>There are Several types colors in CSS. <br>
+            1)rgba : rgba(red,gree,blue,alpha) colors value are an extension of RGB color values with an
+            alpha
+            channel. <br>
+            2)HSL colors : HSL stands for hue(from 0 to 360 is red and 120 is green and 240 is blue)
+            saturation
+            (100% is the full color) and
+            lightness (0% is dark(black) and 100% is white). <br>
+            3)HSLA colors:HSLA color values are an extension of HSL color values with an alpha channel -
+            which
+            specifies the opacity for a color. (hue,saturation,lightness and alpha ). The alpha
+            parameter is a
+            number between 0.0 (fully transparent) and 1.0 (fully opaque). <br>
+            4)Hex:Hex color codes are values that tell the display how much of a color to show. <br>
+            5)color:The color CSS property sets the foreground color value of an element's text and text
+            decorations, and sets the currentcolor value.
+        </p>
+    </details>
+
+    <details>
+        <summary>What is opacity?</summary>
+        <p>The CSS opacity property sets the opacity for the whole element (both background color and
+            text will be opaque/transparent). Ex: property value must be between 0.0 (fully
+            transparent)& 1.0 is
+            fully opaque. </p>
+    </details>
+
+    <details>
+        <summary>What are shadows in css and how many are they?</summary>
+        <p>The shadow effect property in CSS is used to add shadows to text and images in HTML
+            documents. <br>
+            They are two shadows in CSS . they are:- <br>
+            1)text-shadow <br>
+            2)Box-shadow</p>
+    </details>
+
+    <details>
+        <summary>What are gradients in css and how many are they?</summary>
+        <p>Gradients are CSS elements of the image data type that show a transition between two or more
+            colors.
+            <br>
+            they are 3 types :- <br>
+            1)Linear gradient (goes down,up,left, right diagonally)<br>
+            2)Radial gradient (defined by their center) <br>
+            3)Conical gradient (rotated around a center)
+        </p>
+    </details>
+
+    <details>
+        <summary>What is the d/f b/w display and float?
+        </summary>
+        <p>Display:Display specifies how the element appears in organizational terms to the browser.
+            <br>
+            Float: float places an element on the left or right side of its container allowing text and
+            inline
+            elements to wrap around in it.
+        </p>
+    </details>
+
+    <details>
+        <summary>What is d/f b/w the display:inline vs display:block vs display:inline-block?
+        </summary>
+        <table border="3">
+            <thead>
+                <tr>
+                    <th>display-inline</th>
+                    <th>display-block</th>
+                    <th>display-inline-block</th>
+                </tr>
+            <tbody style="border: 1px solid black;">
+                <tr>
+                    <td style="border: 1px solid black;">it is used to display an element as an inline element.</td>
+                    <td style="border: 1px solid black;">it is used to display an element as a block element</td>
+                    <td style="border: 1px solid black;">it is used to display an element as an inline-level block
+                        container.</td>
+                </tr>
+            </tbody>
+            </thead>
+        </table>
+    </details>
+
+    <details>
+        <summary>
+            what is d/f b/w the visibility:hidden and display:none?
+        </summary>
+        <p>visibility : hidden - Hides the element while preserving its position. <br>
+            display - none:Removes the element from the layout.</p>
+    </details>
+    <details>
+        <summary>what is object-fit ? and in how many types can we fit the object?
+        </summary>
+        <p>Object-fit property is used to specify how an img or video should be resized to fits its
+            container.
+            <br>
+            there are five values of object fit:- <br>
+            1.fill <br>
+            2.contain <br>
+            3.cover<br>
+            4.scale-down <br>
+            5.none <br>
+            6.initial <br>
+            7.inherit
+        </p>
+    </details>
+
+    <details>
+        <summary>What is background property? what are the properties of background do you know?
+        </summary>
+        <p>The background property in Css allows you to control the background of an element. <br>
+            the background property is a shorthand property for: <br>
+            1.background-color <br>
+            2.background-image <br>
+            3.background-position <br>
+            4.background-size <br>
+            5.background-repeat <br>
+            6.background-origin <br>
+            7.background-clip <br>
+            8.background-attachment
+        </p>
+    </details>
+
+
+    <details>
+        <summary>what is the position property?</summary>
+        <p>The position property specifies the type of positioning method used for an element.</p>
+    </details>
+
+    <details>
+        <summary>types of position values we can give?</summary>
+        <p>The property takes in five values: static, sticky, relative, absolute and fixed.
+
+        </p>
+    </details>
+
+    <details>
+        <summary>what is d/f b/w the position:sticky and position:fixed?(research-topic) </summary>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>Sticky</th>
+                    <th>Fixed</th>
+                </tr>
+            <tbody style="border: 1px solid black;">
+                <td style="border: 1px solid black;">An element with position: sticky; is positioned based on the user's
+                    scroll position.
+                    A
+                    sticky
+                    element toggles between relative and fixed , depending on the scroll position.</td>
+                <td style="border: 1px solid black;">Fixed position in Css that keeps an element in the same place even
+                    when the page is
+                    scrolled.The
+                    syntax for fixed positioning is position: fixed;. To position the element, we use
+                    top,
+                    right,
+                    bottom, and left properties.
+                </td>
+            </tbody>
+            </thead>
+        </table>
+    </details>
+
+    <details>
+        <summary>what is d/f b/w the position:relative and position:absolute? (research-topic)</summary>
+        <p>Relative : the element is positioned relative to its normal position. <br>
+            Absolute : the element is positioned absolutely to its first positioned parent.</p>
+    </details>
+
+    <details>
+        <summary>What is overflow in css?</summary>
+        <p>The overflow property specifies whether to clip the content or to add scrollbars when the
+            content of
+            an
+            element is too big to fit in the specified area</p>
+    </details>
+
+    <details>
+        <summary>What is z-index in css? default value of z-index?</summary>
+        <p>z-index is the CSS property that controls the stacking order of overlapping elements on a
+            page. <br>
+            The default value of z-index is 0.</p>
+    </details>
+
+    <details>
+        <summary>What is a clear property? (research-topic)</summary>
+        <p>The clear property controls the flow next to floated elements.
+
+            The clear property specifies what should happen with the element that is next to a floating
+            element.
+        </p>
+    </details>
+
+    <details>
+        <summary>What are the css variables?
+        </summary>
+        <p>CSS Variables (officially known as custom properties) are user defined values that can be set
+            once
+            and
+            used many times throughout your codebase. They make it easier to manage colors, fonts, size,
+            and
+            animation values, and ensure consistency across web applications.</p>
+    </details>
+
+    <details>
+        <summary>What is :root in css? (research-topic)</summary>
+        <p>The :root CSS pseudo-class matches the root element of a tree representing the document. In
+            HTML,
+            :root
+            represents the <html> element and is identical to the selector html , except that its
+            specificity is
+            higher. css.</p>
+    </details>
+
+    <details>
+        <summary>What are text properties?</summary>
+        <p>Text properties are the style settings of text, including its: typeface, size, spacing, and
+            alignment.
+            <br>
+            they are :- <br>
+            1.text-align <br>
+            2.text-shadow <br>
+            3.text-decoration <br>
+            4.text-area <br>
+            5.text-color <br>
+            6.text-decoration-style <br>
+            7.text-justify <br>
+            8.text-overflow <br>
+            9. text-transform
+        </p>
+    </details>
+
+    <details>
+        <summary>What are the font -properties?</summary>
+        <p>1.font-style</p> <br>
+        2.font-variant <br>
+        3.font-weight <br>
+        4.font-size <br>
+        5.font-family
+    </details>
+
+
+    <details>
+        <summary>What is a flex box in css? </summary>
+        <p>CSS flexbox short for flexible box layout offers a streamlined way to design adaptable and
+            design and
+            visually appealing layouts.It works primarily in one dimension (row or column) to
+            intelligently
+            distribute space among elements within a container, resulting in clean alignment and
+            responsive
+            designs
+            suitable for various screen sizes.</p>
+    </details>
+
+    <details>
+        <summary>What is a grid layout system?</summary>
+        <p>A grid layout system is a structure of columns and lines that helps organize design elements
+            on a
+            page.
+        </p>
+    </details>
+
+    <details>
+        <summary>differnce b/w the flex vs grid?
+        </summary>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>Flex</th>
+                    <th>Grid</th>
+                </tr>
+            <tbody style="border: 1px solid black;">
+                <tr>
+                    <td style="border: 1px solid black;">The CSS Flexbox offers a one-dimensional layout. It is helpful
+                        in allocating and
+                        aligning
+                        the space among items in a container (made of grids). It works with all kinds of
+                        display
+                        devices and screen sizes.</td>
+                    <td style="border: 1px solid black;">CSS Grid Layout, is a two-dimensional grid-based layout system
+                        with rows and
+                        columns,
+                        making
+                        it easier to design web pages without having to use floats and positioning. Like
+                        tables,
+                        grid layout allow us to align elements into columns and rows.</td>
+                </tr>
+            </tbody>
+            </thead>
+        </table>
+    </details>
+
+    <details>
+        <summary>What are media queries in css? why do we need to use them?
+        </summary>
+        <p>Media queries allow you to apply CSS styles depending on a device's media type (such as print
+            vs.
+            screen)
+            or other features or characteristics such as screen resolution or orientation, aspect ratio,
+            browser
+            viewport width or height, user preferences such as preferring reduced motion, data usage, or
+            transparency. <br>
+            Media queries are a key part of responsive web design, as they allow you to create different
+            layouts
+            depending on the size of the viewport, but they can also be used to detect other things
+            about the
+            environment your site is running on,</p>
+    </details>
+
+    <details>
+        <summary>What are transitions in css?</summary>
+        <p>CSS transitions allows you to change property values smoothly, over a given duration.</p>
+    </details>
+
+    <details>
+        <summary>What are the transforms in css? (rotate (),scale(),skew(),translate())
+        </summary>
+        <p>The transform CSS property lets you rotate, scale, skew, or translate an element. It modifies
+            the
+            coordinate space of the CSS visual formatting model. <br>
+            1.rotate(): The rotate() method rotates an element clockwise or counter-clockwise according
+            to a
+            given
+            degree. <br>
+            2.scale(): The scale() method increases or decreases the size of an element (according to
+            the
+            parameters
+            given for the width and height). <br>
+            3.skew(): The skew() method skews an element along the X and Y-axis by the given angles.
+            <br>
+            4.translate():the translate property is used to move an element along the X and/or Y axis
+            without
+            changing its size or layout
+        </p>
+    </details>
+
+    <details>
+        <summary>How can you center a div? display:grid,place-items:center</summary>
+        <p>To center a div using CSS grid property, We have used "place-items: center;" which centers
+            the div.
+            It
+            can be considered as a shorthand property for align-items and justify-content property.</p>
+    </details>
+
+    <details>
+        <summary>what is d.f b/w the transitions vs transforms vs animations?</summary>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>Transitions</th>
+                    <th>Transforms</th>
+                    <th>Animations</th>
+                </tr>
+
+            <tbody style="border: 1px solid black;">
+                <tr>
+                    <td style="border: 1px solid black;">
+                        Can only move from initial to final state — no intermediate steps.
+                    </td>
+                    <td style="border: 1px solid black;">Transforms change the shape and position of content by
+                        modifying the coordinate
+                        space.
+                        They
+                        can rotate, move, skew, and scale elements.</td>
+                    <td style="border: 1px solid black;">
+                        Can move from initial to final state, with intermediate steps in between
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black;">Run forwards when triggered and in reverse when trigger is
+                        removed</td>
+                    <td style="border: 1px solid black;">Specifies the transforms to apply to the element. It is a
+                        space-separated list
+                        of
+                        transforms, which are applied one after the other, as requested by the
+                        composition
+                        operation.</td>
+                    <td style="border: 1px solid black;">Can run forwards, in reverse, or alternate directions</td>
+                </tr>
+            </tbody>
+            </thead>
+        </table>
+
+    </details>
+
+    <details>
+        <summary>What is a matrix in transforms? (research-topic)</summary>
+        <p>A transformation matrix is a square matrix, which represents a linear transformation in
+            vector space.
+            It
+            transforms (from one) coordinated system to a (different) system by keeping the nature of
+            that space
+            identical.</p>
+    </details>
+
+    <details>
+        <summary>differnce b/w css and css3? (research-topic)</summary>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>CSS</th>
+                    <th>CSS3</th>
+                </tr>
+            <tbody style="border: 1px solid black;">
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;">Capable of positioning texts and objects.</td>
+                    <td style="border: 1px solid black;">Capable of making web pages more attractive and takes less time
+                        to create. It is
+                        backward
+                        compatible with CSS.</td>
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;">Does not support responsive design.</td>
+                    <td style="border: 1px solid black;">Supports responsive design.</td>
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;">Cannot build 3D animation and transformation.</td>
+                    <td style="border: 1px solid black;">Supports animation and 3D transformations.</td>
+                </tr>
+            </tbody>
+            </thead>
+        </table>
+    </details>
+
+    </div>
+    </details>
+</body>
+
+</html>
